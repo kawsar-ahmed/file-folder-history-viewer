@@ -8,6 +8,7 @@ public class EventVeiwer {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EventLogIterator iter = new EventLogIterator("Application");
+		System.out.println("Start:");
 		while(iter.hasNext()) {
 		    EventLogRecord record = iter.next();
 		    System.out.println(record.getRecordNumber()
