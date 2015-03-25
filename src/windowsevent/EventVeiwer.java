@@ -11,9 +11,9 @@ public class EventVeiwer {
 		while(iter.hasNext()) {
 		    EventLogRecord record = iter.next();
 		    System.out.println(record.getRecordNumber()
-		            + ": Event ID: " + record.getEventId()
-		            + ", Event Type: " + record.getType()
-		            + ", Event Source: " + record.getSource());
+		            + ": Event ID -: " + record.getEventId()
+		            + ", Event Type -: " + record.getType()
+		            + ", Event Source -: " + record.getSource());
 		}
 	}
 
