@@ -15,6 +15,7 @@ public class EventCollector {
 		System.out.println("Start:");
 		while(iter.hasNext()) {
 		    EventLogRecord record = iter.next();
+//		    if(record.getSource().equals(new String("File System")) )
 		    System.out.println(record.getRecordNumber()
 		            + ": Event ID: " + record.getEventId()
 		            + ", Event Type: " + record.getType()
@@ -23,9 +24,9 @@ public class EventCollector {
 	}
 	
 	public String getEvents() {
-		EventLogIterator eventLogIterator = new EventLogIterator("Secuirity");
+		EventLogIterator eventLogIterator = new EventLogIterator("Security");
 		String eventsText = "";
-		int i=1000;
+		int i=10;
 		while(eventLogIterator.hasNext() && i-- > 0) {
 			EventLogRecord eventLogRecord = eventLogIterator.next();
 			eventsText += "\n\r"+eventLogRecord.getRecordNumber()

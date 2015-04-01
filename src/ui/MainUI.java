@@ -57,7 +57,8 @@ public class MainUI {
 		scrollPane.setViewportView(textPane);
 		
 		refreshButton = new JButton("Refresh");
-		frame.getContentPane().add(refreshButton, BorderLayout.BEFORE_FIRST_LINE);
+		refreshButton.setSize(10, 5);
+		frame.getContentPane().add(refreshButton, BorderLayout.EAST);
 		refreshButton.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -65,6 +66,7 @@ public class MainUI {
 				loadEventData(textPane);
 			}
 		});
+		
 		
 	}
 
